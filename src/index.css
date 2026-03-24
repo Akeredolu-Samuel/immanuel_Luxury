@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================
+   IMMANUEL LUXURY HOMES — DESIGN SYSTEM
+   "The Golden Anchor"
+   All colors MUST be HSL.
+   ========================================= */
+
+@layer base {
+  :root {
+    /* Core Palette — Deep Navy + Champagne Gold */
+    --background: 214 57% 11%;        /* #0A192F Deep Navy */
+    --foreground: 210 33% 96%;        /* #F0F4FA Off-white */
+
+    --card: 218 52% 16%;              /* #112240 Surface Navy */
+    --card-foreground: 210 33% 96%;
+
+    --popover: 218 52% 16%;
+    --popover-foreground: 210 33% 96%;
+
+    --primary: 40 48% 56%;            /* #C5A059 Champagne Gold */
+    --primary-foreground: 214 57% 11%;
+
+    --secondary: 218 52% 16%;
+    --secondary-foreground: 210 33% 96%;
+
+    --muted: 218 40% 20%;
+    --muted-foreground: 220 25% 60%;  /* #A8B2D1 Muted Blue-Grey */
+
+    --accent: 44 63% 47%;             /* #D4AF37 Metallic Gold */
+    --accent-foreground: 214 57% 11%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 33% 96%;
+
+    --border: 218 40% 22%;
+    --input: 218 40% 22%;
+    --ring: 40 48% 56%;
+
+    --radius: 0.25rem;
+
+    /* Custom tokens */
+    --gold: 40 48% 56%;
+    --gold-bright: 44 63% 47%;
+    --navy-deep: 214 57% 11%;
+    --navy-surface: 218 52% 16%;
+    --navy-elevated: 218 40% 22%;
+    --text-muted: 220 25% 60%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(
+      to bottom,
+      hsl(214 57% 11% / 0.2) 0%,
+      hsl(214 57% 11% / 0.6) 50%,
+      hsl(214 57% 11% / 0.95) 100%
+    );
+    --gradient-gold: linear-gradient(135deg, hsl(40 48% 56%), hsl(44 63% 47%));
+    --gradient-card: linear-gradient(135deg, hsl(218 52% 16%), hsl(218 40% 20%));
+
+    /* Shadows */
+    --shadow-gold: 0 0 40px hsl(40 48% 56% / 0.2);
+    --shadow-card: 0 8px 32px hsl(214 57% 4% / 0.6);
+    --shadow-elevated: 0 20px 60px hsl(214 57% 4% / 0.8);
+
+    --sidebar-background: 218 52% 16%;
+    --sidebar-foreground: 210 33% 96%;
+    --sidebar-primary: 40 48% 56%;
+    --sidebar-primary-foreground: 214 57% 11%;
+    --sidebar-accent: 218 40% 20%;
+    --sidebar-accent-foreground: 210 33% 96%;
+    --sidebar-border: 218 40% 22%;
+    --sidebar-ring: 40 48% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-body {
+    font-family: 'Jost', sans-serif;
+  }
+
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .text-gold-bright {
+    color: hsl(var(--gold-bright));
+  }
+
+  .bg-navy-surface {
+    background-color: hsl(var(--navy-surface));
+  }
+
+  .bg-navy-elevated {
+    background-color: hsl(var(--navy-elevated));
+  }
+
+  .border-gold {
+    border-color: hsl(var(--gold));
+  }
+
+  .border-gold\/20 {
+    border-color: hsl(var(--gold) / 0.2);
+  }
+
+  .border-gold\/40 {
+    border-color: hsl(var(--gold) / 0.4);
+  }
+
+  .shadow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .gold-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gradient-gold);
+  }
+
+  /* Animated underline for nav links */
+  .nav-link-luxury {
+    position: relative;
+  }
+  .nav-link-luxury::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gradient-gold);
+    transition: width 0.3s ease;
+  }
+  .nav-link-luxury:hover::after {
+    width: 100%;
+  }
+
+  /* Section reveal animation */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease forwards;
+  }
+
+  .animate-fade-up-delay-1 { animation-delay: 0.1s; opacity: 0; animation-fill-mode: forwards; animation-name: fadeUp; animation-duration: 0.8s; animation-timing-function: ease; }
+  .animate-fade-up-delay-2 { animation-delay: 0.25s; opacity: 0; animation-fill-mode: forwards; animation-name: fadeUp; animation-duration: 0.8s; animation-timing-function: ease; }
+  .animate-fade-up-delay-3 { animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards; animation-name: fadeUp; animation-duration: 0.8s; animation-timing-function: ease; }
+  .animate-fade-up-delay-4 { animation-delay: 0.55s; opacity: 0; animation-fill-mode: forwards; animation-name: fadeUp; animation-duration: 0.8s; animation-timing-function: ease; }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .text-shimmer {
+    background: linear-gradient(90deg, hsl(var(--gold)) 0%, hsl(var(--gold-bright)) 30%, hsl(0 0% 95%) 50%, hsl(var(--gold-bright)) 70%, hsl(var(--gold)) 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+}
