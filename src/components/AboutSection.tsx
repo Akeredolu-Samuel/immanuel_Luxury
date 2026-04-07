@@ -29,7 +29,7 @@ export default function AboutSection() {
                 Olayemi Duke
               </p>
               <p className="font-body text-xs tracking-[0.2em] uppercase text-gold mt-0.5">
-                Chief Operating Officer (COO)
+                Chief Operating Officer - COO
               </p>
             </div>
           </div>
