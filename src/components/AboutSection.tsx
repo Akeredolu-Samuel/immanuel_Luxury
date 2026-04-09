@@ -15,7 +15,7 @@ export default function AboutSection() {
             <div className="relative z-10 overflow-hidden">
               <img
                 src={ceoImage}
-                alt="Olayemi Duke — CEO, Immanuel Luxury Homes"
+                alt="Olayemi Banjo — CEO, Immanuel Luxury Homes"
                 loading="lazy"
                 className="w-full max-w-md mx-auto object-cover shadow-elevated"
               />
