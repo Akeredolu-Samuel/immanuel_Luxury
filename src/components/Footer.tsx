@@ -116,7 +116,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Immanuel Luxury Homes. All rights reserved.
           </p>
           <p className="font-body text-xs text-muted-foreground font-light">
-            CEO: <span className="text-gold">Olayemi Duke</span>
+            CEO: <span className="text-gold">Olayemi Banjo</span>
           </p>
         </div>
       </div>

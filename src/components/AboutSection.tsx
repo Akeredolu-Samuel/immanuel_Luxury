@@ -26,7 +26,7 @@ export default function AboutSection() {
             {/* Name badge */}
             <div className="absolute bottom-8 right-4 lg:-right-8 bg-navy-surface border border-gold/30 px-6 py-4 shadow-elevated z-20">
               <p className="font-display text-xl font-semibold text-foreground">
-                Olayemi Duke
+                Olayemi Banjo
               </p>
               <p className="font-body text-xs tracking-[0.2em] uppercase text-gold mt-0.5">
                 Chief Operating Officer - COO
@@ -51,7 +51,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="font-body text-sm text-muted-foreground leading-relaxed mb-5 font-light">
-              Olayemi Duke is a seasoned Real Estate Executive, Consultant, and
+              Olayemi Banjo is a seasoned Real Estate Executive, Consultant, and
               Project Manager (MBA) with deep expertise in Nigeria's most
               dynamic property market — Lagos. As CEO of Immanuel Luxury Homes,
               he has built a reputation for delivering uncompromising quality
