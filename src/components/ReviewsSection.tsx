@@ -1,62 +1,8 @@
 import { User, Star } from "lucide-react";
-
-/**
- * Reviews matching the user's provided screenshots. 
- */
-const REVIEWS = [
-  {
-    name: "Guest 1",
-    text: "Thanks for allowing us to stay at your place at short notice. Enjoyed my time there!",
-    rating: 5,
-  },
-  {
-    name: "Guest 2",
-    text: "I enjoyed my stay",
-    rating: 5,
-  },
-  {
-    name: "Guest 3",
-    text: "Thanks for a very nice stay. i'm sure i'll be back sometime",
-    rating: 5,
-  },
-  {
-    name: "Guest 4",
-    text: "Despite the issues encountered, we had a nice stay, thank you for always going over and above to make me comfortable. I appreciate it ",
-    rating: 5,
-  },
-  {
-    name: "Guest 5",
-    text: "I wish i would have saw this sooner to accomodate my stay longer",
-    rating: 5,
-  },
-  {
-    name: "Guest 6",
-    text: "Thank you for being a wonderful host, I loved every moment of my stay in C1 it is my home away from home. I apreciate you and your staff for quick response and action to my needs and request",
-    rating: 5,
-  },
-  {
-    name: "Guest 7",
-    text: "Enjoyed my stay becauseof the facility i am staying in, it's so peaceful ",
-    rating: 5,
-  },
-  {
-    name: "Banjo's Guest",
-    text: "Thanks Banjo. It was a quick trip. Everything was great. I enjoyed my stay",
-    rating: 5,
-  },
-  {
-    name: "Guest 8",
-    text: "I wanted to personally thank you for the incredible insights you shared yesterday, your expertise is truly inspiring",
-    rating: 5,
-  },
-  {
-    name: "Mrs. Ronke",
-    text: "The experience was 👍. Thank you for always making my stay memorable.",
-    rating: 5,
-  },
-];
+import { useAdmin } from "@/context/AdminContext";
 
 const ReviewsSection = () => {
+  const { reviews: REVIEWS } = useAdmin();
   // We duplicate the reviews array to create a seamless infinite scroll effect
   const repeatedReviews = [...REVIEWS, ...REVIEWS, ...REVIEWS, ...REVIEWS];
 
