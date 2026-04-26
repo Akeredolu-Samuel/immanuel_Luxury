@@ -1,0 +1,5 @@
+<svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- House Icon (More like the user's provided logo) -->
+  <path d="M40 85L100 40L160 85V140H110V100H90V140H40V85Z" stroke="#0A192F" stroke-width="12" stroke-linejoin="round" fill="#0A192F"/>
+  <path d="M130 40V25H145V65" stroke="#0A192F" stroke-width="12" stroke-linejoin="round" fill="#0A192F"/>
+</svg>
